@@ -1,8 +1,84 @@
 # This should be in EVERY language file
+# - - - - - - - - - - - - - - - - - - - #
+# The settings for this language file
 settings:
   id: en
   displayname: English
+# - - - - - - - - - - - - - - - - - - - #
+# The formatted date
+date: "dd/MM/yyyy"
+# - - - - - - - - - - - - - - - - - - - #
+# The scoreboards
+scoreboard:
+  lobby:
+    enabled: true
+    title: "&bSurvivalGames"
+    lines:
+      - "&8<date>"
+      - ""
+      - "&bLevel: &3<level>"
+      - "&bXP: &3<xp>&b/&3<xpneeded>"
+      - ""
+      - "&bTotal kills: &3<kills>"
+      - "&bTotal wins: &3<wins>"
+      - "&6Coins: <coins>"
+      - ""
+      - "&b@justreddy"
+  waiting:
+    title: "&bSurvivalGames"
+    lines:
+      - "&8<date>"
+      - ""
+      - "&bPlayers: &3<count>&b/&3<max>"
+      - ""
+      - "&bWaiting..."
+      - ""
+      - "&bMap: &3<map>"
+      - "&bMode: &3<mode>"
+      - ""
+      - "&b@justreddy"
+  starting:
+    title: "&bSurvivalGames"
+    lines:
+      - "&8<date>"
+      - ""
+      - "&bPlayers: &3<count>&b/&3<max>"
+      - ""
+      - "&bStarting in: &3<time>"
+      - ""
+      - "&bMap: &3<map>"
+      - "&bMode: &3<mode>"
+      - ""
+      - "&b@justreddy"
+  playing-solo:
+    title: "&bSurvivalGames"
+    lines:
+      - "&8<date>"
+      - ""
+      - "&bNext Event:"
+      - "&3<event>"
+      - ""
+      - "&bPlayers: &3<count>&b/&3<max>"
+      - ""
+      - "&bKills: &3<kills>"
+      - ""
+      - "&b@justreddy"
+  playing-team:
+    title: "&bSurvivalGames"
+    lines:
+      - "&8<date>"
+      - ""
+      - "&bNext Event:"
+      - "&3<event>"
+      - ""
+      - "&bTeams: &3<teamCount>"
+      - "&bPlayers: &3<count>&b/&3<max>"
+      - ""
+      - "&bTeam: &3<teamId>"
+      - ""
+      - "&bKills: &3<kills>"
+      - ""
+      - "&b@justreddy"
+# - - - - - - - - - - - - - - - - - - - #
 
-hey:
-  test: "Hello!"
 

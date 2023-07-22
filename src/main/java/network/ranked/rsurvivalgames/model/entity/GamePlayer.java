@@ -23,17 +23,17 @@ import java.util.UUID;
 @Setter
 public class GamePlayer {
 
-    final UUID uuid;
+    final UUID uniqueId;
     final String name;
     final Player player;
     boolean dead = false;
     Game game = null;
     PlayerSettings settings;
 
-    public GamePlayer(UUID uuid, String name) {
-        this.uuid = uuid;
+    public GamePlayer(UUID uniqueId, String name) {
+        this.uniqueId = uniqueId;
         this.name = name;
-        this.player = Bukkit.getPlayer(uuid);
+        this.player = Bukkit.getPlayer(uniqueId);
 
         this.settings = new PlayerSettings();
     }

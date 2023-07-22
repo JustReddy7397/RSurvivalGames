@@ -15,7 +15,7 @@ import java.util.Map;
 /**
  * @author JustReddy
  */
-public class LanguageManager {
+public class LanguageManager implements Manager {
 
     private static LanguageManager manager;
 
@@ -26,7 +26,7 @@ public class LanguageManager {
     private final Map<String, Language> languages;
     private final File fileLanguages;
 
-    private LanguageManager() {
+    public LanguageManager() {
         this.fileLanguages = new File(RSurvivalGames.getInstance().getDataFolder().getAbsolutePath() + "/languages");
         if (!fileLanguages.exists()) {
             fileLanguages.mkdirs();
@@ -46,6 +46,7 @@ public class LanguageManager {
         ChatUtil.sendConsole("&7[&dRSurvivalGames&7] &aRegistered language: " + id + " (" + displayname + ")");
     }
 
+    @Override
     public void start() {
         File[] files = fileLanguages.listFiles();
         if (files == null) return;
@@ -77,6 +78,16 @@ public class LanguageManager {
         }
 
         ChatUtil.sendConsole("&7[&dRSurvivalGames&7] &aLoaded " + languages.size() + " languages!");
+
+    }
+
+    @Override
+    public void reload() {
+
+    }
+
+    @Override
+    public void stop() {
 
     }
 
