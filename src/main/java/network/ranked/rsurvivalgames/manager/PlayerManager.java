@@ -61,6 +61,6 @@ public class PlayerManager implements Manager {
 
     @Override
     public void stop() {
-        // EMPTY
+        players.clear();
     }
 }

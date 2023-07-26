@@ -6,6 +6,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import network.ranked.rsurvivalgames.model.entity.GamePlayer;
 import network.ranked.rsurvivalgames.storage.type.Storage;
+import network.ranked.rsurvivalgames.utils.ChatUtil;
 import org.bson.Document;
 
 /**
@@ -19,6 +20,7 @@ public class MongoStorage implements Storage {
         try (MongoClient client = MongoClients.create(url)) {
             MongoDatabase database = client.getDatabase("survivalgames");
             collection = database.getCollection("stats");
+            ChatUtil.sendConsole("&7[&dRSurvivalGames&7] &aConnected to the MongoDB database");
         }
     }
 
@@ -30,6 +32,11 @@ public class MongoStorage implements Storage {
     @Override
     public boolean doesPlayerExists(GamePlayer gamePlayer) {
         return false;
+    }
+
+    @Override
+    public void loadPlayer(GamePlayer gamePlayer) {
+
     }
 
     @Override

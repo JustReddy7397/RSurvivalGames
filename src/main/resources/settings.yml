@@ -1,0 +1,6 @@
+
+game-settings:
+  timers: # In seconds
+    starting: 10
+    ending: 5
+

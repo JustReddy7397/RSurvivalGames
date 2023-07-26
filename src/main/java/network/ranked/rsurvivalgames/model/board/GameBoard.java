@@ -4,6 +4,7 @@ import network.ranked.rsurvivalgames.RSurvivalGames;
 import network.ranked.rsurvivalgames.model.creator.BoardCreator;
 import network.ranked.rsurvivalgames.model.entity.GamePlayer;
 import network.ranked.rsurvivalgames.model.language.Language;
+import network.ranked.rsurvivalgames.model.language.Message;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -46,10 +47,11 @@ public class GameBoard {
             }
         };
 
-        creator.setTitle(section.getString("title"));
         int id = Bukkit.getScheduler().runTaskTimerAsynchronously(RSurvivalGames.getInstance(), () -> {
-            creator.setLines(section.getStringList("lines"));
-        }, 0L, 10 * 20L).getTaskId();
+            Language newLanguage = player.getSettings().getLanguage();
+            creator.setTitle(newLanguage.getString(Message.SCOREBOARD_LOBBY_TITLE));
+            creator.setLines(newLanguage.getStringList(Message.SCOREBOARD_LOBBY_LINES));
+        }, 0L, 5 * 20L).getTaskId();
         data.put(player.getUniqueId(), id);
     }
 

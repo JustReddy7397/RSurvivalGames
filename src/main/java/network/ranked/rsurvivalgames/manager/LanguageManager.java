@@ -27,6 +27,7 @@ public class LanguageManager implements Manager {
     private final File fileLanguages;
 
     public LanguageManager() {
+        manager = this;
         this.fileLanguages = new File(RSurvivalGames.getInstance().getDataFolder().getAbsolutePath() + "/languages");
         if (!fileLanguages.exists()) {
             fileLanguages.mkdirs();
@@ -74,7 +75,6 @@ public class LanguageManager implements Manager {
             }
             register(id, config);
             ChatUtil.sendConsole("&7[&dRSurvivalGames&7] &aRegistered language: " + id + " (" + displayname + ")");
-
         }
 
         ChatUtil.sendConsole("&7[&dRSurvivalGames&7] &aLoaded " + languages.size() + " languages!");
@@ -92,7 +92,7 @@ public class LanguageManager implements Manager {
     }
 
     private void register(String name, FileConfiguration config) {
-        languages.putIfAbsent(name, new Language(config));
+        languages.put(name, new Language(config));
     }
 
     public Language getLanguage(String id) {

@@ -1,0 +1,54 @@
+# DO NOT EDIT THIS
+config-version: 1
+
+# Format:
+# rookie: ( prestige name )
+#   displayname: "&7Rookie Prestige" ( Prestige displauname )
+#   '1': ( level )
+#     xp: 100 ( XP Required to level up )
+#     commands: ( Commands needed to be executed when they reach this level )
+#        - "sg coins give <player> 100"
+
+enabled: true
+
+levels:
+  rookie:
+    displayname: "&7Rookie Prestige"
+    '1':
+      xp: 0
+      commands:
+        - "sg coins give <player> 50"
+    '2':
+      xp: 100
+      commands:
+        - "sg coins give <player> 50"
+    '3':
+      xp: 200
+      commands: [] # Set to [] for no cmds to be executed
+    '4':
+      xp: 300
+      commands: []
+  iron:
+    displayname: "&fIron Prestige"
+    '5':
+      xp: 500
+      commands:
+        - "sg coins give <player> 500"
+    '6':
+      xp: 700
+      commands: []
+    '7':
+      xp: 900
+      commands: []
+    '8':
+      xp: 1100
+      commands: []
+    '9':
+      xp: 1300
+      commands: []
+  gold:
+    displayname: "&6Gold Prestige"
+    '10':
+      xp: 1700
+      commands:
+        - "sg coins give <player> 1500"

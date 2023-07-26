@@ -12,6 +12,8 @@ public interface Storage {
 
     boolean doesPlayerExists(GamePlayer gamePlayer);
 
+    void loadPlayer(GamePlayer gamePlayer);
+
     void savePlayer(GamePlayer gamePlayer);
 
     void deletePlayer(GamePlayer gamePlayer);

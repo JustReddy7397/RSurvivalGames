@@ -4,6 +4,15 @@ main: network.ranked.rsurvivalgames.RSurvivalGames
 api-version: '1.20'
 prefix: RSurvivalGames
 softdepend: [PlaceholderAPI]
+depend:
+  - ProtocolLib
 authors: [JustReddy]
 description: SurvivalGames plugin that's actually good.
 website: https://mc.rankedskywars.net
+commands:
+  sg:
+    description: SurvivalGames by JustReddy
+    aliases:
+      - survivalgames
+      - hungergames
+      - hg

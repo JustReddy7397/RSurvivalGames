@@ -19,6 +19,7 @@ public class PlayerTask implements Runnable {
 
     @Override
     public void run() {
+        if (storage == null) return;
         for (GamePlayer gamePlayer : PlayerManager.getManager().getGamePlayers()) {
             storage.savePlayer(gamePlayer);
         }

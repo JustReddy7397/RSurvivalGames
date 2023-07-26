@@ -4,12 +4,15 @@ import lombok.Getter;
 import lombok.Setter;
 import network.ranked.rsurvivalgames.manager.LanguageManager;
 import network.ranked.rsurvivalgames.model.language.Language;
+import org.bukkit.configuration.serialization.ConfigurationSerializable;
+
+import java.util.Map;
 
 /**
  * @author JustReddy
  */
 @Setter
-public class PlayerSettings {
+public class PlayerSettings implements ConfigurationSerializable {
 
     String language;
 
@@ -20,5 +23,11 @@ public class PlayerSettings {
             setLanguage("en");
         }
         return l;
+    }
+
+    @Override
+    public Map<String, Object> serialize() {
+        // TODO
+        return null;
     }
 }

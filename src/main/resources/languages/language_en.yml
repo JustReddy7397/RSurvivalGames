@@ -31,20 +31,7 @@ scoreboard:
       - ""
       - "&bPlayers: &3<count>&b/&3<max>"
       - ""
-      - "&bWaiting..."
-      - ""
-      - "&bMap: &3<map>"
-      - "&bMode: &3<mode>"
-      - ""
-      - "&b@justreddy"
-  starting:
-    title: "&bSurvivalGames"
-    lines:
-      - "&8<date>"
-      - ""
-      - "&bPlayers: &3<count>&b/&3<max>"
-      - ""
-      - "&bStarting in: &3<time>"
+      - "&b<event>"
       - ""
       - "&bMap: &3<map>"
       - "&bMode: &3<mode>"
@@ -79,6 +66,24 @@ scoreboard:
       - "&bKills: &3<kills>"
       - ""
       - "&b@justreddy"
+  events:
+    waiting: "Waiting..."
+    starting: "Starting in: &b<timer>"
+    pregame: "Released: &b<timer>"
+    refill: "Refill: &b<timer>"
+    deathmatch: "Deathmatch: &b<timer>"
+    finish: "Game End: &b<timer>"
+    ending: "Game ended!"
+    no-events: "No events"
 # - - - - - - - - - - - - - - - - - - - #
+messages:
+  commands:
+    invalid-command: "&cThis command is invalid"
+    missing-permission: "&cYou do not have the required permission to execute this command"
+  game: 
+    timers:
+      enabled: true
+      starting: "&bThe game is starting in &3<seconds>"
+
 
 

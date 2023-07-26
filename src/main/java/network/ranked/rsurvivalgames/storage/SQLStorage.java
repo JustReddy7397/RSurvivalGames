@@ -36,6 +36,11 @@ public class SQLStorage implements Storage {
     }
 
     @Override
+    public void loadPlayer(GamePlayer gamePlayer) {
+
+    }
+
+    @Override
     public void savePlayer(GamePlayer gamePlayer) {
 
     }
